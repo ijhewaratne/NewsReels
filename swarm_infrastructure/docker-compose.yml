@@ -1,0 +1,209 @@
+# =============================================================================
+# Multi-Agent News Video Production Swarm - Infrastructure
+# =============================================================================
+# Docker Compose for Redis, ChromaDB, Langfuse, and supporting services
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ===========================================================================
+  # REDIS - Message Bus and Caching Layer
+  # ===========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: swarm-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-swarm_redis_secure_2024}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    networks:
+      - swarm-network
+    restart: unless-stopped
+
+  # Redis Insight (Optional - for debugging)
+  redis-insight:
+    image: redis/redisinsight:latest
+    container_name: swarm-redis-insight
+    ports:
+      - "5540:5540"
+    volumes:
+      - redis_insight_data:/data
+    networks:
+      - swarm-network
+    restart: unless-stopped
+    profiles:
+      - debug
+
+  # ===========================================================================
+  # CHROMADB - Vector Database for Agent Memory
+  # ===========================================================================
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: swarm-chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+      - ANONYMIZED_TELEMETRY=FALSE
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_HTTP_PORT=8000
+      - CHROMA_SERVER_AUTH_PROVIDER=${CHROMA_AUTH_PROVIDER:-chromadb.auth.token_authn.TokenAuthServerProvider}
+      - CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER=${CHROMA_AUTH_HEADER:-X-Chroma-Token}
+      - CHROMA_AUTH_TOKEN=${CHROMA_AUTH_TOKEN:-swarm_chroma_token_2024}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - swarm-network
+    restart: unless-stopped
+
+  # ===========================================================================
+  # LANGFUSE - Monitoring and Observability
+  # ===========================================================================
+  langfuse:
+    image: langfuse/langfuse:latest
+    container_name: swarm-langfuse
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD:-langfuse_db_pass}@postgres:5432/langfuse
+      - NEXTAUTH_SECRET=${LANGFUSE_SECRET:-langfuse_nextauth_secret_key_2024}
+      - NEXTAUTH_URL=http://localhost:3000
+      - SALT=${LANGFUSE_SALT:-langfuse_encryption_salt_2024}
+      - TELEMETRY_ENABLED=false
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - swarm-network
+    restart: unless-stopped
+
+  # ===========================================================================
+  # POSTGRES - Database for Langfuse
+  # ===========================================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: swarm-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-langfuse_db_pass}
+      - POSTGRES_DB=langfuse
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - swarm-network
+    restart: unless-stopped
+
+  # ===========================================================================
+  # PROMETHEUS - Metrics Collection (Optional)
+  # ===========================================================================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: swarm-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - swarm-network
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+  # ===========================================================================
+  # GRAFANA - Visualization (Optional)
+  # ===========================================================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: swarm-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-grafana_admin_2024}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    networks:
+      - swarm-network
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+  # ===========================================================================
+  # MINIO - Object Storage for Video Assets (Optional)
+  # ===========================================================================
+  minio:
+    image: minio/minio:latest
+    container_name: swarm-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=${MINIO_USER:-minioadmin}
+      - MINIO_ROOT_PASSWORD=${MINIO_PASSWORD:-minio_secure_pass_2024}
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - swarm-network
+    restart: unless-stopped
+    profiles:
+      - storage
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+volumes:
+  redis_data:
+    driver: local
+  redis_insight_data:
+    driver: local
+  chromadb_data:
+    driver: local
+  postgres_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  minio_data:
+    driver: local
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+networks:
+  swarm-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

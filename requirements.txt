@@ -1,0 +1,33 @@
+# News Video System - Scout & Council Swarm
+# Requirements file
+
+# Core framework
+crewai>=0.30.0
+crewai-tools>=0.2.0
+
+# LangChain for tools
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-openai>=0.0.5
+
+# Data validation
+pydantic>=2.0.0
+
+# Async support
+asyncio>=3.4.3
+
+# HTTP requests (for API integrations)
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Date/time handling
+python-dateutil>=2.8.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Optional: For production deployments
+# uvicorn>=0.24.0
+# fastapi>=0.104.0
+# redis>=5.0.0
+# celery>=5.3.0

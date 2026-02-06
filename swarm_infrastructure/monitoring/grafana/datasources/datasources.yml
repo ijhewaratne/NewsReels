@@ -1,0 +1,30 @@
+# =============================================================================
+# GRAFANA DATASOURCES - Swarm Monitoring
+# =============================================================================
+
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: false
+
+  - name: Langfuse
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: langfuse
+    user: postgres
+    secureJsonData:
+      password: langfuse_db_pass
+    jsonData:
+      sslmode: disable
+      maxOpenConns: 100
+      maxIdleConns: 100
+      maxIdleConnsAuto: true
+      connMaxLifetime: 14400
+      postgresVersion: 1500
+      timescaledb: false
