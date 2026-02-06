@@ -179,42 +179,6 @@ class StoryPitchList(BaseModel):
     """Wrapper for a list of story pitches to ensure correct JSON parsing."""
     stories: List[StoryPitch] = Field(default_factory=list)
 
-class VoteDecision(str, Enum):
-    """Possible vote decisions from council agents."""
-    APPROVE = "approve"
-    REJECT = "reject"
-    NEEDS_MORE_INFO = "needs_more_info"
-    HOLD = "hold"
-
-class CouncilVote(BaseModel):
-    """
-    Structured vote from a Council agent on a story pitch.
-    """
-    model_config = ConfigDict(extra="forbid")
-    story_id: str = Field(description="ID of the story being voted on")
-    voter_name: str = Field(description="Name of the council agent voting")
-    decision: VoteDecision = Field(description="The vote decision")
-    
-    # Scoring
-    relevance_score: float = Field(ge=0.0, le=1.0, description="How relevant to audience")
-    credibility_score: float = Field(ge=0.0, le=1.0, description="Credibility assessment")
-    trending_score: float = Field(ge=0.0, le=1.0, description="Trending potential")
-    
-    # Rationale
-    reasoning: str = Field(description="Detailed reasoning for the vote")
-    concerns: List[str] = Field(default_factory=list, description="Any concerns or red flags")
-    suggestions: List[str] = Field(default_factory=list, description="Suggestions for improvement")
-    
-    # Weight (based on voter type and confidence)
-    vote_weight: float = Field(default=1.0, ge=0.0, le=2.0, description="Weight of this vote")
-    
-    voted_at: datetime = Field(default_factory=datetime.utcnow)
-    
-    @property
-    def weighted_score(self) -> float:
-        """Calculate weighted score for this vote."""
-        avg_score = (self.relevance_score + self.credibility_score + self.trending_score) / 3
-        return avg_score * self.vote_weight
 
 class StoryDecision(BaseModel):
     """
