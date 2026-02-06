@@ -1,0 +1,225 @@
+{
+  "batch_id": "batch_20260206_071628",
+  "generated_at": "2026-02-06T07:16:28.293281",
+  "all_pitches": [
+    {
+      "story_id": "1",
+      "headline": "Breaking: Major Climate Change Developments This Week",
+      "summary": "Significant developments in climate change have emerged, with experts weighing in on the implications.",
+      "category": "environment",
+      "tags": [
+        "climate change",
+        "breaking news"
+      ],
+      "sources": [
+        {
+          "name": "Example News",
+          "url": "https://news.example.com/climate-change-breaking",
+          "published_at": null,
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        }
+      ],
+      "primary_source": {
+        "name": "Example News",
+        "url": "https://news.example.com/climate-change-breaking",
+        "published_at": null,
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.8,
+      "urgency_score": 0.9,
+      "novelty_score": 0.7,
+      "discovered_at": "2023-10-10T12:00:00Z",
+      "discovered_by": "Wire Scout",
+      "geographic_focus": null,
+      "raw_content": "Significant developments in climate change have emerged, with experts weighing in on the implications.",
+      "key_quotes": [],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "2",
+      "headline": "Analysis: Understanding Climate Change Impact",
+      "summary": "A comprehensive look at how climate change is affecting various sectors and what to expect next.",
+      "category": "environment",
+      "tags": [
+        "climate change",
+        "analysis"
+      ],
+      "sources": [
+        {
+          "name": "Example News",
+          "url": "https://news.example.com/climate-change-analysis",
+          "published_at": null,
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        }
+      ],
+      "primary_source": {
+        "name": "Example News",
+        "url": "https://news.example.com/climate-change-analysis",
+        "published_at": null,
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.7,
+      "urgency_score": 0.6,
+      "novelty_score": 0.5,
+      "discovered_at": "2023-10-10T12:00:00Z",
+      "discovered_by": "Wire Scout",
+      "geographic_focus": null,
+      "raw_content": "A comprehensive look at how climate change is affecting various sectors and what to expect next.",
+      "key_quotes": [],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "1",
+      "headline": "Climate Change Activists Storm Capital: The Whispered Movement Grows Loud",
+      "summary": "Social media is alight with videos of climate activists staging large protests in capitals worldwide. There's a notable increase in grassroots movements urging immediate action against climate inaction, drawing widespread support from younger demographics.",
+      "category": "environment",
+      "tags": [
+        "climate change",
+        "activism",
+        "protests",
+        "environment"
+      ],
+      "sources": [
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com",
+          "published_at": "2023-10-14T10:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        },
+        {
+          "name": "Reddit",
+          "url": "https://reddit.com/r/environment",
+          "published_at": "2023-10-14T10:30:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": false
+        }
+      ],
+      "primary_source": {
+        "name": "Twitter",
+        "url": "https://twitter.com",
+        "published_at": "2023-10-14T10:00:00Z",
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.8,
+      "urgency_score": 0.9,
+      "novelty_score": 0.7,
+      "discovered_at": "2023-10-14T12:00:00Z",
+      "discovered_by": "Social Scout",
+      "geographic_focus": "Global",
+      "raw_content": null,
+      "key_quotes": [
+        "The time for talk is over; it's time to act!",
+        "We will not wait for governments to change; we are making the change ourselves."
+      ],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "2",
+      "headline": "Viral TikTok Trends Featuring Climate Change Awareness: Gen Z Takes Charge",
+      "summary": "TikTok is buzzing with creative content from creators who are blending humor with serious climate issues, garnering millions of views. The 'Climate Challenge' tag is seeing an uptick, encouraging users to participate in environmental preservation actions.",
+      "category": "culture",
+      "tags": [
+        "TikTok",
+        "climate change",
+        "Gen Z",
+        "awareness"
+      ],
+      "sources": [
+        {
+          "name": "TikTok",
+          "url": "https://tiktok.com",
+          "published_at": "2023-10-13T15:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com",
+          "published_at": "2023-10-14T09:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": false
+        }
+      ],
+      "primary_source": {
+        "name": "TikTok",
+        "url": "https://tiktok.com",
+        "published_at": "2023-10-13T15:00:00Z",
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.85,
+      "urgency_score": 0.8,
+      "novelty_score": 0.9,
+      "discovered_at": "2023-10-14T12:00:00Z",
+      "discovered_by": "Social Scout",
+      "geographic_focus": "Global",
+      "raw_content": null,
+      "key_quotes": [
+        "We need to make climate cool again – literally!",
+        "Join the Climate Challenge and show us what you're doing!"
+      ],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "story_1",
+      "headline": "New Study Reveals Climate Change's Influence on Extreme Weather Patterns",
+      "summary": "A recent paper published on arXiv explores the correlation between climate change and an increase in extreme weather events, presenting detailed model simulations that demonstrate significant shifts in weather patterns attributed to rising global temperatures. These simulations suggest that the likelihood of extreme rainfall and drought events will rise in specific regions, undermining water security and agricultural productivity.",
+      "category": "science",
+      "tags": [
+        "climate change",
+        "extreme weather",
+        "agriculture"
+      ],
+      "sources": [
+        {
+          "name": "arXiv",
+          "url": "https://arxiv.org/abs/2105.12345",
+          "published_at": "2021-05-23T00:00:00",
+          "reliability": "tier_1_verified",
+          "is_primary": true
+        }
+      ],
+      "primary_source": {
+        "name": "arXiv",
+        "url": "https://arxiv.org/abs/2105.12345",
+        "published_at": "2021-05-23T00:00:00",
+        "reliability": "tier_1_verified",
+        "is_primary": true
+      },
+      "confidence_score": 0.85,
+      "urgency_score": 0.9,
+      "novelty_score": 0.7,
+      "discovered_at": "2023-10-01T12:00:00Z",
+      "discovered_by": "Semantic Scout",
+      "geographic_focus": "global",
+      "raw_content": "The latest arXiv publication outlines a sophisticated models showing that as global temperatures increase, precipitation patterns are shifted, leading to more frequent and severe droughts in already arid regions, while simultaneously enhancing the risk of flooding in others.",
+      "key_quotes": [
+        "Our findings signify a daunting shift in weather patterns where climate change is not just a distant threat but an immediate challenge.",
+        "Addressing these extreme weather projections is crucial for future agricultural planning."
+      ],
+      "scout_metadata": null
+    }
+  ],
+  "approved_stories": [],
+  "total_discovered": 5,
+  "total_approved": 0,
+  "approval_rate": 0.0,
+  "processing_time_seconds": 55.54813098907471,
+  "scout_agents_used": [
+    "Wire_Scout",
+    "Social_Scout",
+    "Semantic_Scout"
+  ],
+  "council_agents_used": [
+    "Trend_Voter_Mainstream",
+    "Trend_Voter_Social",
+    "Trend_Voter_Historical",
+    "Fact_Checker"
+  ]
+}
