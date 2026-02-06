@@ -1,0 +1,13 @@
+VIDEO SCRIPT: New Study Reveals Climate Change's Influence on Extreme Weather Patterns
+Duration: 60s | Platform: youtube
+Voice: {'gender': 'male', 'age': '30-40', 'tone': 'urgent, authoritative, yet approachable'}
+============================================================
+
+[00:00-00:60] B_ROLL
+NARRATION: A recent paper published on arXiv explores the correlation between climate change and an increase in extreme weather events, presenting detailed model simulations that demonstrate significant shifts in weather patterns attributed to rising global temperatures. These simulations suggest that the likelihood of extreme rainfall and drought events will rise in specific regions, undermining water security and agricultural productivity.
+VISUAL: B-roll footage related to science
+GRAPHICS: {'lower_thirds_text': "Study explores climate change's impact on weather patterns", 'style': 'Modern, sans-serif font with semi-transparent background'}
+B-ROLL: Stock footage related to topic, News graphics
+
+
+CLOSING: Subscribe for more updates.

@@ -18,6 +18,9 @@ Version: 1.0.0
 ================================================================================
 """
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 import json
 import asyncio
@@ -39,6 +42,14 @@ try:
     from ddgs import DDGS
 except ImportError:
     from duckduckgo_search import DDGS
+
+# Council Voting System
+from council_voting import (
+    CouncilVotingSystem,
+    CouncilVote,
+    CouncilDecision,
+    aggregate_votes_implementation
+)
 
 # ==============================================================================
 # CONFIGURATION & CONSTANTS
@@ -1412,13 +1423,28 @@ class StoryPipeline:
         return unique
     
     async def _collect_votes(self, story: StoryPitch) -> List[CouncilVote]:
-        """Collect votes from all council members for a story."""
-        # In production, this would properly run council agents
-        # For now, return placeholder votes
-        return []
+        """
+        Collect votes from all council members for a story.
+
+        Runs 4 council agents in sequence:
+        1. Trend_Voter_Mainstream - Institutional credibility
+        2. Trend_Voter_Social - Viral potential
+        3. Trend_Voter_Historical - Long-term significance
+        4. Fact_Checker - Source validation
+        """
+        council = CouncilVotingSystem()
+
+        # Convert StoryPitch to dict for processing
+        story_dict = story.model_dump() if hasattr(story, 'model_dump') else story.dict()
+
+        return await council.vote_on_story(story_dict)
     
     def _aggregate_votes(self, story: StoryPitch, votes: List[CouncilVote]) -> StoryDecision:
-        """Aggregate council votes into a final decision."""
+        """
+        Aggregate council votes into a final decision.
+
+        Uses weighted scoring with fact-checker weighted 2x on credibility.
+        """
         if not votes:
             return StoryDecision(
                 story_id=story.story_id,
@@ -1433,53 +1459,39 @@ class StoryPipeline:
                 overall_score=0.0,
                 is_approved=False,
                 priority="low",
-                votes=votes,
+                approved_for_stage="archive",
+                next_agent=None,
+                votes=[]
             )
-        
-        # Calculate aggregates
-        avg_relevance = sum(v.relevance_score for v in votes) / len(votes)
-        avg_credibility = sum(v.credibility_score for v in votes) / len(votes)
-        avg_trending = sum(v.trending_score for v in votes) / len(votes)
-        overall_score = (avg_relevance + avg_credibility + avg_trending) / 3
-        
-        # Count decisions
-        approve_count = sum(1 for v in votes if v.decision == VoteDecision.APPROVE)
-        reject_count = sum(1 for v in votes if v.decision == VoteDecision.REJECT)
-        hold_count = sum(1 for v in votes if v.decision in [VoteDecision.HOLD, VoteDecision.NEEDS_MORE_INFO])
-        
-        # Determine approval
-        is_approved = (
-            overall_score >= Config.MIN_VOTE_THRESHOLD and
-            approve_count > reject_count and
-            avg_credibility >= 0.6  # Must have reasonable credibility
-        )
-        
-        # Determine priority
-        if overall_score >= 0.9 and story.urgency_score >= 0.8:
-            priority = "critical"
-        elif overall_score >= 0.8:
-            priority = "high"
-        elif overall_score >= 0.7:
-            priority = "medium"
-        else:
-            priority = "low"
-        
+
+        # Use the implementation from council_voting module
+        story_dict = story.model_dump() if hasattr(story, 'model_dump') else story.dict()
+        result = aggregate_votes_implementation(self, story_dict, votes)
+
+        # Convert votes back to CouncilVote objects if needed
+        vote_objects = []
+        for v in votes:
+            if isinstance(v, CouncilVote):
+                vote_objects.append(v)
+            else:
+                vote_objects.append(CouncilVote(**v))
+
         return StoryDecision(
             story_id=story.story_id,
             headline=story.headline,
             total_votes=len(votes),
-            approve_count=approve_count,
-            reject_count=reject_count,
-            hold_count=hold_count,
-            avg_relevance=avg_relevance,
-            avg_credibility=avg_credibility,
-            avg_trending=avg_trending,
-            overall_score=overall_score,
-            is_approved=is_approved,
-            priority=priority,
-            approved_for_stage="script" if is_approved else "archive",
-            next_agent="Script_Writer" if is_approved else None,
-            votes=votes,
+            approve_count=result['approve_count'],
+            reject_count=result['reject_count'],
+            hold_count=result['hold_count'],
+            avg_relevance=result['avg_relevance'],
+            avg_credibility=result['avg_credibility'],
+            avg_trending=result['avg_trending'],
+            overall_score=result['overall_score'],
+            is_approved=result['is_approved'],
+            priority=result['priority'],
+            approved_for_stage=result['stage'],
+            next_agent="Script_Writer" if result['is_approved'] else None,
+            votes=vote_objects
         )
     
     def _save_output(self):

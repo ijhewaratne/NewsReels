@@ -1,0 +1,12 @@
+VIDEO SCRIPT: Climate Change Activists Storm Capital: The Whispered Movement Grows Loud
+Duration: 60s | Platform: youtube
+Voice: {'description': {'gender': 'female', 'age': '30-40', 'tone': 'urgent and passionate'}}
+============================================================
+
+[00:00-00:60] B_ROLL
+NARRATION: Social media is alight with videos of climate activists staging large protests in capitals worldwide. There's a notable increase in grassroots movements urging immediate action against climate inaction, drawing widespread support from younger demographics.
+VISUAL: B-roll footage related to environment
+B-ROLL: Stock footage related to topic, News graphics
+
+
+CLOSING: Subscribe for more updates.

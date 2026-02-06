@@ -1,0 +1,12 @@
+VIDEO SCRIPT: Analysis: Understanding Climate Change Impact
+Duration: 60s | Platform: youtube
+Voice: {'gender': 'female', 'age': '30-40', 'tone': 'informative yet approachable'}
+============================================================
+
+[00:00-00:60] B_ROLL
+NARRATION: A comprehensive look at how climate change is affecting various sectors and what to expect next.
+VISUAL: B-roll footage related to environment
+B-ROLL: Stock footage related to topic, News graphics
+
+
+CLOSING: Subscribe for more updates.
