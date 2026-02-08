@@ -371,6 +371,12 @@ async def main():
     print("\nNote: These examples require OPENAI_API_KEY to be set.")
     print("Some examples use placeholder data and don't require API calls.")
     
+    # API Key Check
+    print("\nAPI Keys loaded:")
+    print(f"  NewsAPI: {'✅' if os.getenv('NEWSAPI_KEY') else '❌'}")
+    print(f"  Reddit: {'✅' if os.getenv('REDDIT_CLIENT_ID') else '❌'}")
+    print(f"  OpenAI: {'✅' if os.getenv('OPENAI_API_KEY') else '❌'}")
+    
     # Run examples (comment out ones you don't want to run)
     
     # Example 1: Basic usage (requires API key)

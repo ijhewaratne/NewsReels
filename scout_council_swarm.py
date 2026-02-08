@@ -32,8 +32,20 @@ from pydantic import BaseModel, Field, validator, ConfigDict
 
 # CrewAI imports
 from crewai import Agent, Task, Crew, Process
-from crewai.tools import BaseTool
+from crewai.tools import BaseTool, tool
 from crewai.memory import LongTermMemory, ShortTermMemory
+
+# REAL NEWS INTEGRATION - Add these lines
+from real_news_integration import (
+    RealNewsSearchTool, 
+    RealSocialMediaTool, 
+    RealAcademicSearchTool
+)
+
+# Initialize real tools
+_real_news_tool = RealNewsSearchTool()
+_real_social_tool = RealSocialMediaTool()
+_real_academic_tool = RealAcademicSearchTool()
 
 # For tool implementations
 # from langchain_community.tools import DuckDuckGoSearchRun
@@ -240,111 +252,23 @@ class BatchStoryOutput(BaseModel):
 # TOOL DEFINITIONS
 # ==============================================================================
 
-class NewsSearchTool(BaseTool):
-    """Tool for searching news from various sources."""
-    name: str = "news_search"
-    description: str = "Search for recent news stories on a given topic"
-    
-    def _run(self, query: str, hours_back: int = 24) -> str:
-        """
-        Search for news stories.
-        In production, this would integrate with NewsAPI, GDELT, etc.
-        """
-        # Placeholder implementation
-        # Placeholder implementation
-        search = NewsSearchTool()
-        time_filter = f"past {hours_back} hours"
-        results = search.run(f"{query} news {time_filter}")
-        return results
+# NewsSearchTool (lines 243-258) removed in favor of real tool integration below.
 
-class SocialMediaMonitorTool(BaseTool):
-    """Tool for monitoring social media trends."""
-    name: str = "social_media_monitor"
-    description: str = "Monitor Twitter/X, Reddit for trending topics and viral content"
-    
-    def _run(self, platform: str = "all", topic: Optional[str] = None) -> str:
-        """
-        Monitor social media for trending content.
-        In production, this would use Twitter API, Reddit API, etc.
-        """
-        # Try search first
-        try:
-            results = self._try_search(platform, topic)
-            if results and results != "[]":
-                 return json.dumps(results)
-        except Exception as e:
-            print(f"Social search failed: {e}")
-        
-        # If empty or failed, return realistic mock data for testing
-        return self._get_mock_data(platform, topic)
+@tool("social_media_monitor")
+def social_media_monitor(platform: str, topic: str) -> str:
+    """
+    Monitor REAL social media trends from Reddit.
+    Returns actual trending discussions, not mock data.
+    """
+    return _real_social_tool._run(platform, topic)
 
-    def _try_search(self, platform: str, topic: Optional[str]) -> List[Dict]:
-        """Attempt to search using available tools."""
-        platforms = ["Twitter/X", "Reddit", "TikTok"]
-        if platform != "all":
-            platforms = [platform]
-        
-        search = NewsSearchTool()
-        query = f"trending {topic}" if topic else "trending topics"
-        # We assume NewsSearchTool returns a JSON string, need to parse it or just return it if it's raw text
-        # But NewsSearchTool returns JSON string of DDG results.
-        # Let's just try to search.
-        try:
-            results_json = search._run(f"{query} {' '.join(platforms)}")
-            data = json.loads(results_json)
-            if isinstance(data, list) and len(data) > 0:
-                return data
-        except:
-            pass
-        return []
-
-    def _get_mock_data(self, platform: str, topic: Optional[str]) -> str:
-        """Return realistic social media trends when APIs fail"""
-        t = topic if topic else "news"
-        mock_trends = [
-            {
-                "headline": f"Viral Thread: {t.title()} Impact on Daily Life",
-                "platform": "Twitter",
-                "engagement": "45K likes, 12K retweets",
-                "influencers": ["@climate_reality", "@greenpeace"],
-                "sentiment": "concerned",
-                "confidence": 0.85,
-                "urgency": 0.8,
-                "novelty": 0.9
-            },
-            {
-                "headline": f"Reddit AMA: Scientist Explains {t.title()} Crisis",
-                "platform": "Reddit",
-                "engagement": "28K upvotes, 3.2K comments",
-                "subreddit": "r/science",
-                "sentiment": "informative",
-                "confidence": 0.8,
-                "urgency": 0.6,
-                "novelty": 0.75
-            }
-        ]
-        return json.dumps(mock_trends)
-
-class AcademicSearchTool(BaseTool):
-    """Tool for searching academic and official sources."""
-    name: str = "academic_search"
-    description: str = "Search arXiv, research papers, SEC filings, EU portals"
-    
-    def _run(self, query: str, source_type: str = "all") -> str:
-        """
-        Search academic and official sources.
-        In production, this would use arXiv API, SEC EDGAR, etc.
-        """
-        search = NewsSearchTool()
-        
-        if source_type == "arxiv":
-            return search.run(f"site:arxiv.org {query}")
-        elif source_type == "sec":
-            return search.run(f"site:sec.gov {query}")
-        elif source_type == "eu":
-            return search.run(f"site:europa.eu {query}")
-        else:
-            return search.run(f"arxiv OR sec.gov OR europa.eu {query}")
+@tool("academic_search")
+def academic_search(query: str, source_type: str = "all") -> str:
+    """
+    Search REAL academic papers from arXiv.
+    Returns actual research papers, not mock data.
+    """
+    return _real_academic_tool._run(query, source_type)
 
 class FactCheckTool(BaseTool):
     """Tool for fact-checking claims."""
@@ -356,7 +280,7 @@ class FactCheckTool(BaseTool):
         Fact-check a specific claim.
         In production, this would use fact-checking APIs, knowledge bases, etc.
         """
-        search = NewsSearchTool()
+        search = news_search
         
         # Search for verification
         verification = search.run(f"fact check: {claim}")
@@ -375,7 +299,7 @@ class TrendAnalysisTool(BaseTool):
         """
         Analyze trends for a topic.
         """
-        search = NewsSearchTool()
+        search = news_search
         wiki = WikipediaAPIWrapper()
         
         # Get historical context
@@ -390,32 +314,13 @@ class TrendAnalysisTool(BaseTool):
 # AGENT DEFINITIONS - SCOUT SWARM (TIER 1)
 # ==============================================================================
 
-class NewsSearchTool(BaseTool):
-    name: str = "news_search"
-    description: str = "Search for news articles using DuckDuckGo."
-
-    def _run(self, query: str) -> str:
-        try:
-            results = DDGS().text(query, max_results=10)
-            if results and len(results) > 0:
-                return json.dumps(results)
-        except Exception as e:
-            print(f"    DDGS search error: {e}")
-        
-        # Return mock data if search fails or returns empty
-        print(f"    Using mock data for: {query}")
-        return json.dumps([
-            {
-                "title": f"Breaking: Major {query.title()} Developments This Week",
-                "href": f"https://news.example.com/{query.replace(' ', '-')}-breaking",
-                "body": f"Significant developments in {query} have emerged, with experts weighing in on the implications."
-            },
-            {
-                "title": f"Analysis: Understanding {query.title()} Impact",
-                "href": f"https://news.example.com/{query.replace(' ', '-')}-analysis",
-                "body": f"A comprehensive look at how {query} is affecting various sectors and what to expect next."
-            }
-        ])
+@tool("news_search")
+def news_search(query: str) -> str:
+    """
+    Search for REAL news articles from NewsAPI and RSS feeds.
+    Returns actual breaking news, not mock data.
+    """
+    return _real_news_tool._run(query)
 
 def create_wire_scout() -> Agent:
     """
@@ -448,7 +353,7 @@ def create_wire_scout() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[NewsSearchTool()],
+        tools=[news_search],
         memory=True,
         max_iter=3,
         llm=Config.DEFAULT_MODEL,
@@ -486,7 +391,7 @@ def create_social_scout() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[SocialMediaMonitorTool()],
+        tools=[social_media_monitor],
         memory=True,
         max_iter=3,
         llm=Config.DEFAULT_MODEL,
@@ -528,7 +433,7 @@ def create_semantic_scout() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[AcademicSearchTool(), TrendAnalysisTool()],
+        tools=[academic_search, TrendAnalysisTool()],
         memory=True,
         max_iter=5,  # Semantic scout gets more iterations for deep research
         llm=Config.DEFAULT_MODEL,
@@ -574,7 +479,7 @@ def create_trend_voter_mainstream() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[NewsSearchTool(), TrendAnalysisTool()],
+        tools=[news_search, TrendAnalysisTool()],
         memory=True,
         max_iter=3,
         llm=Config.DEFAULT_MODEL,
@@ -619,7 +524,7 @@ def create_trend_voter_social() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[SocialMediaMonitorTool(), TrendAnalysisTool()],
+        tools=[social_media_monitor, TrendAnalysisTool()],
         memory=True,
         max_iter=3,
         llm=Config.DEFAULT_MODEL,
@@ -705,7 +610,7 @@ def create_fact_checker() -> Agent:
         
         verbose=True,
         allow_delegation=False,
-        tools=[FactCheckTool(), NewsSearchTool()],
+        tools=[FactCheckTool(), news_search],
         memory=True,
         max_iter=5,
         llm=Config.MANAGER_MODEL,  # Fact checker uses stronger model
@@ -747,7 +652,7 @@ def create_editorial_director() -> Agent:
         
         verbose=True,
         allow_delegation=True,  # Can delegate to other agents
-        tools=[NewsSearchTool(), TrendAnalysisTool()],
+        tools=[news_search, TrendAnalysisTool()],
         memory=True,
         max_iter=10,
         llm=Config.MANAGER_MODEL,

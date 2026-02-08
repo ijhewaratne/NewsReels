@@ -1,0 +1,239 @@
+[
+  {
+    "story_id": "1",
+    "headline": "Severe Weather Events Linked to Climate Change Increasing Globally",
+    "total_votes": 4,
+    "approve_count": 3,
+    "reject_count": 0,
+    "hold_count": 0,
+    "avg_relevance": 0.9,
+    "avg_credibility": 0.85,
+    "avg_trending": 0.73,
+    "overall_score": 0.83,
+    "is_approved": true,
+    "priority": "high",
+    "approved_for_stage": "research",
+    "next_agent": "Script_Writer",
+    "votes": [
+      {
+        "council_member": "Trend Voter - Senior Assignment Editor",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.9,
+        "trending_score": 0.8,
+        "reasoning": "The story addresses a critical and timely concern regarding severe weather events linked to climate change, a topic of significant interest to global audiences. The sources used (Global Weather Monitoring Agency and BBC News) are reputable and lend substantial credibility to the report. The urgency of the situation, coupled with the human impact of climate change on food security and public health, emphasizes its news value. Given the gravity of these weather changes, the story is likely to gain traction among mainstream media, making this a relevant and engaging piece.",
+        "key_strengths": [
+          "Strong and credible sources from a verified tier 1 agency and a reputable news outlet.",
+          "High relevance to current global environmental issues and significant human interest."
+        ],
+        "key_concerns": [
+          "Potential over-reliance on a singular report without multiple independent corroborating sources.",
+          "Need for more specific data and examples to support claims, though the current summary is compelling."
+        ],
+        "suggestions": [
+          "Incorporate additional expert commentary or data from independent researchers to strengthen the story further."
+        ],
+        "similar_stories": [
+          "Recent coverage by The Guardian on the rising frequency of extreme weather events linked to climate change and its impacts on communities."
+        ],
+        "competitive_advantage": "This story highlights an urgent global issue supported by reputable sources and underscores the immediate impacts on public health and food security, ensuring it captures both media attention and audience interest.",
+        "voted_at": "2026-02-07 23:58:22.481379"
+      },
+      {
+        "council_member": "Trend Voter - Social Media & Viral Potential",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.9,
+        "trending_score": 0.8,
+        "reasoning": "This story taps into a highly relevant and urgent issue\u2014climate change and its impact on severe weather events. Given the growing concern for environmental issues among younger demographics, it aligns well with current conversations. The emotion this story triggers is primarily anxiety and urgency, urging immediate attention and action. The use of trustworthy sources enhances credibility, and the selection of relatable aspects like food security makes it more shareable. The clear narrative setup (the problem), conflict (impending risks), and implied resolution (need for awareness and action) make it compelling.",
+        "key_strengths": [
+          "High relevance to current global concerns and trends",
+          "Strong, credible sources validate the story"
+        ],
+        "key_concerns": [
+          "Potential oversaturation of similar stories could limit uniqueness",
+          "May require more visual content to enhance engagement, such as impactful imagery or video footage of extreme weather events"
+        ],
+        "suggestions": [
+          "Incorporate compelling visuals or B-roll of recent extreme weather events to increase shareability and virality.",
+          "Include personal stories or testimonials from those impacted by these weather events to humanize the narrative further."
+        ],
+        "similar_stories": [
+          "Recent coverage on climate-related disasters like the floods in Pakistan and wildfires in Australia have also garnered considerable attention."
+        ],
+        "competitive_advantage": "This story stands out due to its combination of robust evidence and the urgent call for public awareness about climate change's immediate impacts, making it highly shareable among audiences who see themselves as proactive participants in the climate movement.",
+        "voted_at": "2026-02-07 23:58:25.962070"
+      },
+      {
+        "council_member": "Trend Voter - Historical Significance",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.85,
+        "trending_score": 0.8,
+        "reasoning": "The link between severe weather events and climate change is a critical global issue that is increasingly recognized. This story addresses a structural shift in our understanding of environmental threats that have long-term implications for food security and public health. Extreme weather is not just cyclical; it reflects deep, systemic changes that the global community must confront. The historical parallels to incidents like the Dust Bowl of the 1930s and the increased frequency of hurricanes since the late 20th century help frame the seriousness of this report. The credibility of the sources, including the Global Weather Monitoring Agency, adds weight to the story, while the framing around public health resonates strongly with current concerns.",
+        "key_strengths": [
+          "Addresses an urgent global concern that affects millions",
+          "Backed by credible research and reputable news sources"
+        ],
+        "key_concerns": [
+          "Potential for media fatigue due to overreporting on climate issues",
+          "Complexity of linking extreme weather events directly to human action may challenge public comprehension"
+        ],
+        "suggestions": [
+          "Include specific examples or case studies of recent extreme weather events to provide a tangible connection for readers.",
+          "Highlight potential policy responses or community-level adaptations to engage the audience in proactive discussion."
+        ],
+        "similar_stories": [
+          "Recent reports on Hurricane Ian's impact and its connection to climate change",
+          "Coverage of the 2023 European heatwaves and their relation to warming trends"
+        ],
+        "competitive_advantage": "This story stands out due to its timely relevance as the world grapples with immediate environmental challenges, unlike past discussions that were often sidelined or viewed as abstract future threats.",
+        "voted_at": "2026-02-07 23:58:29.309597"
+      },
+      {
+        "council_member": "Fact Checker - Accuracy & Verification",
+        "decision": "NEEDS_MORE_INFO",
+        "relevance_score": 0.9,
+        "credibility_score": 0.8,
+        "trending_score": 0.5,
+        "reasoning": "The story headline suggests a critical issue of global importance which is relevant to a broad audience. The primary source, the Global Weather Monitoring Agency, is listed as tier_1_verified, which supports the credibility of the information, but requires further confirmation of their existence and the specific report's availability. The quote provided lacks an attribution to a specific person, making it less reliable. Furthermore, while the BBC News is a reputable source, the existence and specific reporting on this topic should be directly verified. The connection between climate change and extreme weather is established in scientific communities, but specific claims about trends and risks warrant further scrutiny to ensure accuracy.",
+        "key_strengths": [
+          "Relevance to ongoing global concern about climate change.",
+          "Utilization of seemingly credible sources."
+        ],
+        "key_concerns": [
+          "Need verification of the Global Weather Monitoring Agency's report.",
+          "Generalized quote lacks specificity and attribution."
+        ],
+        "suggestions": [
+          "Verify the existence and content of the Global Weather Monitoring Agency's report.",
+          "Provide more detailed and attributed quotes from experts or representatives."
+        ],
+        "similar_stories": [
+          "UN climate report discussing similar themes",
+          "Recent IPCC reports on extreme weather events"
+        ],
+        "competitive_advantage": "The integration of a potentially new report adds freshness to the ongoing discourse about climate change impacts, potentially offering newer data and insights not yet widely covered.",
+        "voted_at": "2026-02-07 23:58:36.611827"
+      }
+    ],
+    "decided_at": "2026-02-07 23:58:36.612761"
+  },
+  {
+    "story_id": "2",
+    "headline": "New UN Study Finds Over Half of Earth's Population at Risk from Climate Change",
+    "total_votes": 4,
+    "approve_count": 3,
+    "reject_count": 0,
+    "hold_count": 0,
+    "avg_relevance": 0.9,
+    "avg_credibility": 0.84,
+    "avg_trending": 0.73,
+    "overall_score": 0.82,
+    "is_approved": true,
+    "priority": "high",
+    "approved_for_stage": "research",
+    "next_agent": "Script_Writer",
+    "votes": [
+      {
+        "council_member": "Trend Voter - Mainstream Media Perspective",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.9,
+        "trending_score": 0.8,
+        "reasoning": "This story presents significant findings from a credible source, the United Nations, regarding the alarming risks of climate change to over half of the world's population. The urgency surrounding climate change makes this topic timely and relevant, likely to resonate with a large audience. The fact that it builds upon data from a reputable tier-1 source, such as the UN, increases its credibility. It is also likely to gain traction among mainstream outlets, particularly as climate change continues to be a prominent global issue.",
+        "key_strengths": [
+          "Backed by a credible and authoritative source (UN Environment Programme).",
+          "Addresses an urgent and highly topical issue affecting billions of people."
+        ],
+        "key_concerns": [
+          "The impact of climate change is a saturation topic; coverage could compete with many similar stories.",
+          "Dependence on single-source reporting without additional outside corroboration may limit the depth of the story."
+        ],
+        "suggestions": [
+          "Incorporate quotes or reactions from named experts in climate policy or representatives from vulnerable communities to enhance the narrative."
+        ],
+        "similar_stories": [
+          "Recent UN climate report highlights planetary impacts and future risks; widespread media coverage of Cop26 discussions on climate policy."
+        ],
+        "competitive_advantage": "Uniquely emphasizes the scale of risk faced by vulnerable populations, which could stimulate new discussions among world leaders about urgent action, setting it apart from previous climate news.",
+        "voted_at": "2026-02-07 23:58:40.294598"
+      },
+      {
+        "council_member": "Trend Voter - Social Media & Viral Potential",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.95,
+        "trending_score": 0.8,
+        "reasoning": "This story addresses a critical issue affecting a significant portion of the global population, which is highly relevant to current discussions around climate change. The urgency and scale of the risks outlined in the study are likely to trigger emotional responses and foster sharing among audiences invested in environmental issues. The strong backing from reputable sources like the UN and Reuters enhances the story's credibility and engagement potential. Given the high stakes and urgency, coupled with the clear 'villain' of climate change and its implications, the story has a solid chance of resonating on various platforms.",
+        "key_strengths": [
+          "Highly relevant and urgent issue that resonates with a large audience.",
+          "Strong credibility from verified sources, enhancing trustworthiness."
+        ],
+        "key_concerns": [
+          "Potentially saturated market due to frequent climate-related discussions.",
+          "The novelty score could be higher; similar studies may dilute the unique angle."
+        ],
+        "suggestions": [
+          "Use compelling visuals or real-life stories of individuals affected by climate change to enhance emotional appeal."
+        ],
+        "similar_stories": [
+          "Recent coverage of COP discussions and other UN climate reports."
+        ],
+        "competitive_advantage": "This story stands out due to the specific statistical focus on vulnerable populations, which humanizes the broader discussion around climate change, making it more relatable and shareable on social platforms.",
+        "voted_at": "2026-02-07 23:58:43.267105"
+      },
+      {
+        "council_member": "Trend Voter - Historical Significance",
+        "decision": "APPROVE",
+        "relevance_score": 0.9,
+        "credibility_score": 0.85,
+        "trending_score": 0.8,
+        "reasoning": "This story highlights a critical issue that affects over half of the global population and presents a clear inflection point in our approach to climate policy and international collaboration. The relevance of climate change continues to grow as it intersects with global security, public health, and economic stability, making this not just incremental news but a significant wake-up call for concerted action. The long-term implications and urgency indicate that this topic will matter greatly in 5 to 10 years, potentially influencing political and social frameworks globally.",
+        "key_strengths": [
+          "High urgency reflecting immediate action needed",
+          "Backed by a credible source (UN) with robust data"
+        ],
+        "key_concerns": [
+          "Potential for media fatigue around climate change narratives",
+          "Need for action plans to accompany the findings to avoid inaction"
+        ],
+        "suggestions": [
+          "Incorporate perspectives from affected populations and case studies to enhance relatability and urgency"
+        ],
+        "similar_stories": [
+          "Recent reports on climate disasters and their socio-economic impacts",
+          "Comparison with previous UN climate assessments"
+        ],
+        "competitive_advantage": "This story stands out by framing climate change not only as an environmental issue but as a critical threat to human existence, thereby engaging a broader audience concerned with survival, equity, and justice.",
+        "voted_at": "2026-02-07 23:58:47.143182"
+      },
+      {
+        "council_member": "Fact Checker - Accuracy & Verification",
+        "decision": "NEEDS_MORE_INFO",
+        "relevance_score": 0.9,
+        "credibility_score": 0.75,
+        "trending_score": 0.5,
+        "reasoning": "The story relies on a purported new study from the United Nations claiming over half of the world's population is at risk from climate change. While the UN Environment Programme and Reuters are reputable sources, the specific study must be directly verified for authenticity and accuracy. Additionally, the key quote provided needs to be checked for its exact wording and context. This is especially important given its dramatic tone. The summary's claim of urgency requires careful scrutiny to avoid sensationalism unless justified by the source material.",
+        "key_strengths": [
+          "Use of reputable, tier-1 and tier-2 sources such as the UN and Reuters.",
+          "Timely and relevant topic concerning global impact and audience interest."
+        ],
+        "key_concerns": [
+          "The specific UN study must be located and verified for a credible review.",
+          "The dramatic quote may be out of context or inaccurately attributed."
+        ],
+        "suggestions": [
+          "Verify the exact UN report and examine its conclusions in detail.",
+          "Ensure quotes are verified for accuracy and context from the original report."
+        ],
+        "similar_stories": [
+          "Reports on IPCC findings regarding climate change impacts on global populations."
+        ],
+        "competitive_advantage": "This story has potential high engagement due to its wide-reaching implications on global populations and current relevance in environmental policy discussions.",
+        "voted_at": "2026-02-07 23:58:52.279843"
+      }
+    ],
+    "decided_at": "2026-02-07 23:58:52.280099"
+  }
+]
