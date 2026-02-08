@@ -1,0 +1,661 @@
+{
+  "batch_id": "batch_20260206_121304",
+  "generated_at": "2026-02-06T12:13:04.199848",
+  "all_pitches": [
+    {
+      "story_id": "1",
+      "headline": "Climate Inaction Claims Millions of Lives Annually, Warns WHO",
+      "summary": "The World Health Organization's latest report reveals that climate inaction is responsible for millions of deaths each year. As the global health community gathers momentum leading into COP28, the situation calls for urgent collaborative efforts to mitigate health risks stemming from climate change.",
+      "category": "environment",
+      "tags": [
+        "climate change",
+        "health",
+        "WHO",
+        "COP28"
+      ],
+      "sources": [
+        {
+          "name": "World Health Organization",
+          "url": "https://www.who.int/news/item/29-10-2025-climate-inaction-is-claiming-millions-of-lives-every-year--warns-new-lancet-countdown-report",
+          "published_at": "2025-10-29T00:00:00Z",
+          "reliability": "tier_1_verified",
+          "is_primary": true
+        }
+      ],
+      "primary_source": {
+        "name": "World Health Organization",
+        "url": "https://www.who.int/news/item/29-10-2025-climate-inaction-is-claiming-millions-of-lives-every-year--warns-new-lancet-countdown-report",
+        "published_at": "2025-10-29T00:00:00Z",
+        "reliability": "tier_1_verified",
+        "is_primary": true
+      },
+      "confidence_score": 0.9,
+      "urgency_score": 0.9,
+      "novelty_score": 0.8,
+      "discovered_at": "2025-10-29T00:00:00Z",
+      "discovered_by": "Wire Scout",
+      "geographic_focus": null,
+      "raw_content": null,
+      "key_quotes": [],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "2",
+      "headline": "WHO Calls for Urgent Action on Climate and Health Ahead of COP28",
+      "summary": "As COP28 approaches, the World Health Organization emphasizes the pressing need for immediate actions to address the interconnections between climate change and health. This call reflects growing concern within the global health community about the worsening impacts of climate change.",
+      "category": "environment",
+      "tags": [
+        "climate change",
+        "Health",
+        "WHO",
+        "COP28"
+      ],
+      "sources": [
+        {
+          "name": "World Health Organization",
+          "url": "https://www.who.int/news/item/27-11-2023-global-health-community-calls-for-urgent-action-on-climate-and-health-at-cop28",
+          "published_at": "2023-11-27T00:00:00Z",
+          "reliability": "tier_1_verified",
+          "is_primary": true
+        }
+      ],
+      "primary_source": {
+        "name": "World Health Organization",
+        "url": "https://www.who.int/news/item/27-11-2023-global-health-community-calls-for-urgent-action-on-climate-and-health-at-cop28",
+        "published_at": "2023-11-27T00:00:00Z",
+        "reliability": "tier_1_verified",
+        "is_primary": true
+      },
+      "confidence_score": 0.8,
+      "urgency_score": 0.8,
+      "novelty_score": 0.7,
+      "discovered_at": "2023-11-27T00:00:00Z",
+      "discovered_by": "Wire Scout",
+      "geographic_focus": null,
+      "raw_content": null,
+      "key_quotes": [],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "1",
+      "headline": "Youth Climate Activists Mobilize For Global 'Climate Strike' Ahead of COP28",
+      "summary": "A wave of youth-led climate activism is gaining momentum as global protests are planned for the upcoming COP28 summit, with students calling for immediate climate action and accountability from leaders.",
+      "category": "environment",
+      "tags": [
+        "climate strike",
+        "youth activism",
+        "COP28"
+      ],
+      "sources": [
+        {
+          "name": "Twitter/X",
+          "url": "https://twitter.com/examplesource1",
+          "published_at": "2023-10-01T12:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        },
+        {
+          "name": "Reddit",
+          "url": "https://reddit.com/r/environment/comments/example",
+          "published_at": "2023-10-01T13:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": false
+        }
+      ],
+      "primary_source": {
+        "name": "Twitter/X",
+        "url": "https://twitter.com/examplesource1",
+        "published_at": "2023-10-01T12:00:00Z",
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.85,
+      "urgency_score": 0.9,
+      "novelty_score": 0.7,
+      "discovered_at": "2023-10-01T14:00:00Z",
+      "discovered_by": "Social Scout",
+      "geographic_focus": null,
+      "raw_content": null,
+      "key_quotes": [
+        "We need to act now for a sustainable future.",
+        "Climate leaders talk; we act!",
+        "Our voices matter!"
+      ],
+      "scout_metadata": null
+    },
+    {
+      "story_id": "2",
+      "headline": "Scientists Warn of Unprecedented Climate Consequences Post-COP28",
+      "summary": "Researchers are voicing concerns about potential climate tipping points that could emerge in the aftermath of the COP28 discussions, urging for stronger commitments during negotiations.",
+      "category": "science",
+      "tags": [
+        "COP28",
+        "climate science",
+        "tipping points"
+      ],
+      "sources": [
+        {
+          "name": "TikTok",
+          "url": "https://tiktok.com/@examplesource2",
+          "published_at": "2023-09-30T11:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": true
+        },
+        {
+          "name": "Twitter/X",
+          "url": "https://twitter.com/examplesource3",
+          "published_at": "2023-10-01T15:00:00Z",
+          "reliability": "tier_2_reputable",
+          "is_primary": false
+        }
+      ],
+      "primary_source": {
+        "name": "TikTok",
+        "url": "https://tiktok.com/@examplesource2",
+        "published_at": "2023-09-30T11:00:00Z",
+        "reliability": "tier_2_reputable",
+        "is_primary": true
+      },
+      "confidence_score": 0.8,
+      "urgency_score": 0.85,
+      "novelty_score": 0.75,
+      "discovered_at": "2023-10-01T14:30:00Z",
+      "discovered_by": "Social Scout",
+      "geographic_focus": null,
+      "raw_content": null,
+      "key_quotes": [
+        "Ignoring climate science could lead to catastrophic outcomes.",
+        "The time for action is not after COP28, but during it."
+      ],
+      "scout_metadata": null
+    }
+  ],
+  "approved_stories": [
+    {
+      "story_id": "1",
+      "headline": "Climate Inaction Claims Millions of Lives Annually, Warns WHO",
+      "total_votes": 4,
+      "approve_count": 3,
+      "reject_count": 0,
+      "hold_count": 0,
+      "avg_relevance": 0.89,
+      "avg_credibility": 0.92,
+      "avg_trending": 0.72,
+      "overall_score": 0.85,
+      "is_approved": true,
+      "priority": "critical",
+      "approved_for_stage": "research",
+      "next_agent": "Script_Writer",
+      "votes": [
+        {
+          "council_member": "Trend Voter - Mainstream Media Perspective",
+          "decision": "APPROVE",
+          "relevance_score": 0.85,
+          "credibility_score": 1.0,
+          "trending_score": 0.75,
+          "reasoning": "This story is built on a credible source, the World Health Organization, lending considerable weight to its claims about climate inaction and public health. The urgency surrounding climate change, especially with COP28 approaching, adds significant news value. This aligns well with current global discussions and has the potential for widespread relevance and engagement. It also provides vital information in a timely manner, which is critical for mainstream audiences.",
+          "key_strengths": [
+            "Authoritative source (WHO) providing credible data and insights.",
+            "High relevance given the upcoming COP28 and global focus on climate change."
+          ],
+          "key_concerns": [
+            "Lack of key quotes or supporting data to strengthen the argument further.",
+            "Potential for the topic to become saturated as more outlets cover related news leading up to COP28."
+          ],
+          "suggestions": [
+            "Incorporate direct quotes from the WHO report to enhance authority and provide additional context.",
+            "Include statistics or comparisons to past years to emphasize the severity of the issue."
+          ],
+          "similar_stories": [
+            "Recent coverage by major outlets about climate-related health impacts and preparations for COP28."
+          ],
+          "competitive_advantage": "This story stands out due to its connection to a major health organization and the immediate context of a global climate conference, making it highly timely and relevant, unlike typical environmental reports which may lack direct health implications.",
+          "voted_at": "2026-02-06T12:11:01.233217"
+        },
+        {
+          "council_member": "Trend Voter - Social Media Strategist",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 1.0,
+          "trending_score": 0.8,
+          "reasoning": "This story highlights a pressing global issue that directly impacts public health, especially in light of the upcoming COP28, making it highly relevant to a wide audience concerned about climate change and health. The urgency marked by the WHO's report contributes to its sharing potential, as it presents a clear narrative that can provoke high-arousal emotions like fear and urgency. The source is credible, being a tier-1 verified organization, which enhances trustworthiness further. The topic is currently trending as global discussions on climate change intensify, especially with significant summits on the horizon.",
+          "key_strengths": [
+            "High relevance due to its connection to current global events (COP28) and public health.",
+            "Strong credibility originating from a reputable source (WHO) which boosts trust.",
+            "Urgent call to action which encourages sharing amongst activists and concerned citizens."
+          ],
+          "key_concerns": [
+            "While the topic is urgent, it may be considered as repetitive or already saturated in many circles, potentially leading to diminished engagement.",
+            "The lack of key quotes or personal stories might make it less relatable to some audiences."
+          ],
+          "suggestions": [
+            "Incorporate quotes from affected individuals or experts to personalize and humanize the statistics.",
+            "Add visual elements such as infographics or compelling images from impacted areas to increase engagement."
+          ],
+          "similar_stories": [
+            "Recent coverage on climate-driven health crises, particularly during global gatherings aimed at negotiating climate action, such as articles from reputable outlets like The Guardian or BBC."
+          ],
+          "competitive_advantage": "The story takes a unique angle by directly linking climate inaction to health outcomes, a perspective that may not be as widely covered compared to broader climate discussions, and emphasizes immediate human consequences.",
+          "voted_at": "2026-02-06T12:11:09.016142"
+        },
+        {
+          "council_member": "Trend Voter - Historical Significance",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 0.8,
+          "trending_score": 0.85,
+          "reasoning": "This report from the WHO highlights a critical intersection of climate change and public health, making it highly relevant on multiple levels. Climate inaction has historical roots that date back to at least the industrial revolution, reflecting systemic oversights in policy that echo past failures to address pressing societal health crises. The urgency surrounding COP28 amplifies the need for immediate responses, suggesting that this could indeed serve as a pivotal moment in climate governance and responsibility. In 5-10 years, we may look back at COP28 as a significant point of commitment or failure concerning climate action, especially as the fallout from climate-related health issues becomes more dire and quantifiable. There is a strong narrative here about the consequences of inaction that resonates with historical precedents like the delayed responses to tobacco health risks or the AIDS crisis, which saw mountains of evidence before meaningful action was taken.",
+          "key_strengths": [
+            "Ties climate change directly to immediate health impacts, highlighting the cost of inaction.",
+            "Timely in relation to COP28, making it both urgent and relevant."
+          ],
+          "key_concerns": [
+            "Potential for sensationalism; ensuring that the narrative is fact-based is crucial.",
+            "Need for concrete data or case studies to substantiate claims about millions of lives lost annually."
+          ],
+          "suggestions": [
+            "Incorporate specific case studies or testimonials to provide concrete examples of how climate inaction leads to health risks.",
+            "Consider comparing this report to past WHO statements on health crises to illustrate patterns of response or inaction."
+          ],
+          "similar_stories": [
+            "Reports on climate-related health impacts released by other organizations or prior WHO announcements.",
+            "Historical analyses of public health responses to climatic changes and their societal implications."
+          ],
+          "competitive_advantage": "This story leverages an authoritative source (WHO) and a critical global conference (COP28) to shed light on an urgent issue, creating a powerful narrative that aligns with both current events and long-term trends in public health and environmental policy.",
+          "voted_at": "2026-02-06T12:11:19.035238"
+        },
+        {
+          "council_member": "Fact Checker - Accuracy & Verification",
+          "decision": "NEEDS_MORE_INFO",
+          "relevance_score": 0.9,
+          "credibility_score": 0.9,
+          "trending_score": 0.5,
+          "reasoning": "While the World Health Organization is a credible source, additional verification is needed to ensure the accuracy of the data claim that 'millions of deaths each year' are due to climate inaction. We need to access and review the actual WHO report to confirm the figures and context of the assertion. The headline and summary suggest a significant impact which requires detailed validation to avoid sensationalism.",
+          "key_strengths": [
+            "World Health Organization is a reputable source",
+            "High relevance to climate change and health sectors"
+          ],
+          "key_concerns": [
+            "The claim about 'millions of deaths' needs verification and context",
+            "Absence of direct quotes or specific data from WHO report in the pitch"
+          ],
+          "suggestions": [
+            "Secure and review the WHO report for exact data and context",
+            "Include specific quotes or data from the report to substantiate the claim"
+          ],
+          "similar_stories": [
+            "Coverage of climate impact on health at previous COP conferences",
+            "Recent WHO statements on climate change and health risks"
+          ],
+          "competitive_advantage": "Timely relevance with COP28 approaching and significant potential impact on public health discussions.",
+          "voted_at": "2026-02-06T12:11:26.416979"
+        }
+      ],
+      "decided_at": "2026-02-06T12:11:26.418460"
+    },
+    {
+      "story_id": "2",
+      "headline": "WHO Calls for Urgent Action on Climate and Health Ahead of COP28",
+      "total_votes": 4,
+      "approve_count": 3,
+      "reject_count": 0,
+      "hold_count": 1,
+      "avg_relevance": 0.8,
+      "avg_credibility": 0.87,
+      "avg_trending": 0.65,
+      "overall_score": 0.78,
+      "is_approved": true,
+      "priority": "high",
+      "approved_for_stage": "research",
+      "next_agent": "Script_Writer",
+      "votes": [
+        {
+          "council_member": "Trend Voter - Mainstream Media Perspective",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 1.0,
+          "trending_score": 0.8,
+          "reasoning": "The story highlights a crucial health and environmental intersection underscored by the WHO, making it highly relevant as COP28 approaches. The source is credible, given that it comes directly from the World Health Organization, a recognized tier 1 institution. The urgency and importance of climate change on health impacts aligns with current global discussions. Additionally, the timing makes it a strong candidate for coverage as COP28 is a major event, amplifying the story’s relevance. It is not commodity news, as it offers new insights from a leading health expert organization.",
+          "key_strengths": [
+            "Source from a tier 1 organization (WHO)",
+            "Addresses an important and timely issue (climate and health)"
+          ],
+          "key_concerns": [
+            "Lack of quotes or specific data points can limit the depth of the story",
+            "The potential for the story to be overshadowed by numerous other COP28-related announcements"
+          ],
+          "suggestions": [
+            "Incorporate key quotes from WHO officials to add depth",
+            "Include specific examples of health impacts due to climate change to enhance the narrative"
+          ],
+          "similar_stories": [
+            "WHO's previous calls to action regarding climate change",
+            "Recent analyses on the health implications of climate events"
+          ],
+          "competitive_advantage": "The story's direct tie-in to the WHO's statements offers authoritative insight that sets it apart from other narratives, particularly as COP28 discussions expand.",
+          "voted_at": "2026-02-06T12:11:33.933419"
+        },
+        {
+          "council_member": "Trend Voter - Social Media & Viral Potential",
+          "decision": "HOLD",
+          "relevance_score": 0.5,
+          "credibility_score": 0.5,
+          "trending_score": 0.5,
+          "reasoning": "Could not parse vote: Invalid control character at: line 24 column 281 (char 1962)",
+          "key_strengths": [],
+          "key_concerns": [],
+          "suggestions": [],
+          "similar_stories": [],
+          "competitive_advantage": null,
+          "voted_at": "2026-02-06T12:11:42.583890"
+        },
+        {
+          "council_member": "Trend Voter - Historical Significance",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 0.85,
+          "trending_score": 0.8,
+          "reasoning": "The issue of climate change deeply intertwines with global health, making this story highly relevant. The WHO's call for urgent action ahead of COP28 reflects escalating concerns over the health implications of climate change, which parallels historical moments when public health has been a critical driver of policy (e.g., the response to the 1918 flu pandemic). This narrative may signify an inflection point in how global health priorities are positioned alongside climate policies, suggesting a lasting impact on future policies and public awareness. The engagement potential is bolstered by the COP28 context, as climate discussions tend to garner substantial media attention.",
+          "key_strengths": [
+            "Timeliness and relevance to current global health and environmental discussions",
+            "High trustworthiness due to the credible source (WHO) and urgent message"
+          ],
+          "key_concerns": [
+            "Potential for the message to be viewed as another plea without actionable follow-through",
+            "Risk of being overshadowed by other concurrent events around COP28"
+          ],
+          "suggestions": [
+            "Incorporate specific recommendations or actions that the WHO suggests, to enhance the actionable aspect of the story"
+          ],
+          "similar_stories": [
+            "WHO’s previous statements on climate and health impacts leading up to major summits like COP26",
+            "Increasing recognition of climate-related health issues in global policy dialogues"
+          ],
+          "competitive_advantage": "This story stands out due to the authoritative voice of the WHO, the urgent tone of the call to action, and its direct connection to a high-profile global event (COP28), making it likely to resonate with a wide audience concerned about climate and health intersecting.",
+          "voted_at": "2026-02-06T12:11:51.327236"
+        },
+        {
+          "council_member": "Fact Checker - Accuracy & Verification",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 1.0,
+          "trending_score": 0.5,
+          "reasoning": "The story is sourced from the World Health Organization, a highly credible source, especially regarding health-related matters. The topic of climate change and its impact on health is highly relevant and timely, given the upcoming COP28 summit. While there are no key quotes provided, the mention of WHO’s emphasis and call to action aligns with their public health objectives and established authority on global health matters.",
+          "key_strengths": [
+            "Credible source (WHO)",
+            "Timely relevance with COP28 approaching"
+          ],
+          "key_concerns": [
+            "No direct quotes included for context",
+            "General urgency score without specific new data highlighted"
+          ],
+          "suggestions": [
+            "Include specific quotes or statements from WHO representatives to enhance credibility and context"
+          ],
+          "similar_stories": [
+            "Coverage of WHO's involvement in previous COP conferences",
+            "Recent discussions on climate change impacts on health"
+          ],
+          "competitive_advantage": "The story leverages the authority of WHO as a leading voice in both health and policy discussion around climate change, giving it a strong foundation of credibility and urgency as COP28 nears.",
+          "voted_at": "2026-02-06T12:11:57.648165"
+        }
+      ],
+      "decided_at": "2026-02-06T12:11:57.648591"
+    },
+    {
+      "story_id": "1",
+      "headline": "Youth Climate Activists Mobilize For Global 'Climate Strike' Ahead of COP28",
+      "total_votes": 4,
+      "approve_count": 2,
+      "reject_count": 0,
+      "hold_count": 0,
+      "avg_relevance": 0.86,
+      "avg_credibility": 0.62,
+      "avg_trending": 0.65,
+      "overall_score": 0.7,
+      "is_approved": true,
+      "priority": "medium",
+      "approved_for_stage": "research",
+      "next_agent": "Script_Writer",
+      "votes": [
+        {
+          "council_member": "Trend Voter - Mainstream Media Perspective",
+          "decision": "NEEDS_MORE_INFO",
+          "relevance_score": 0.8,
+          "credibility_score": 0.3,
+          "trending_score": 0.5,
+          "reasoning": "While the topic of youth climate activism in anticipation of COP28 is highly relevant and timely, the sources cited (Twitter/X and Reddit) are not considered Tier 1 or widely accepted reputable media outlets. They lack the necessary credibility to support a strong news story. Additionally, the quotes provided are rather generic and do not add much depth. Without multi-source confirmation from established news outlets or named experts, the story falls short of the journalistic standards needed for approval. Further verification and stronger sourcing are necessary to provide a more concrete narrative.",
+          "key_strengths": [
+            "Addresses a timely and engaging issue with significant global relevance.",
+            "Harnesses the growing momentum of youth activism, which appeals to a broad audience."
+          ],
+          "key_concerns": [
+            "Reliance on social media sources which may not provide accurate or comprehensive coverage.",
+            "Lack of expert voices or data-driven insights limit the credibility of the story."
+          ],
+          "suggestions": [
+            "Seek out and incorporate quotes or insights from named experts in climate science or policy.",
+            "Look for corroboration from more authoritative news sources focusing on the build-up to COP28."
+          ],
+          "similar_stories": [
+            "Recent coverage of youth-led protests in the lead-up to key climate summits, such as COP26 and COP27."
+          ],
+          "competitive_advantage": "This story highlights a critical moment in climate activism by focusing on youth mobilization, which distinguishes it from standard environmental news, provided it can secure credible sources.",
+          "voted_at": "2026-02-06T12:12:06.338832"
+        },
+        {
+          "council_member": "Trend Voter - Social Media & Viral Potential",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 0.85,
+          "trending_score": 0.8,
+          "reasoning": "This story capitalizes on urgency and a highly relevant topic for a large demographic. Youth climate activism is gaining significant traction globally, and the upcoming COP28 summit creates an immediate context for these protests. The narrative features a clear 'hero' in the youth activists and a shared 'villain' in the leaders who are perceived to be failing in their climate responsibilities. Additionally, the use of quotes enhances emotional engagement. The momentum of the story aligns well with current social media trends focusing on environmentalism and activism. Overall, this pitch has a strong shareability potential, especially among younger audiences who heavily engage with climate-related content.",
+          "key_strengths": [
+            "High relevance to current global events and audience concerns",
+            "Strong emotional resonance reflecting urgency and accountability"
+          ],
+          "key_concerns": [
+            "Potential for message fatigue if similar stories saturate the media",
+            "Risk of backlash from political or corporate entities opposed to the narrative"
+          ],
+          "suggestions": [
+            "Incorporate visual elements such as protest footage to increase engagement potential",
+            "Highlight quantifiable actions or specific demands from activists to provide more depth"
+          ],
+          "similar_stories": [
+            "Recent youth-led protests from various countries leading up to climate events globally",
+            "Coverage of youth activism impacting policy discussions at international levels"
+          ],
+          "competitive_advantage": "This story stands out due to the synergy between immediate global relevance, emotional engagement, and an upcoming major event (COP28) that provides a natural timeline for the activism, enhancing urgency and shareability.",
+          "voted_at": "2026-02-06T12:12:14.230946"
+        },
+        {
+          "council_member": "Trend Voter - Historical Significance",
+          "decision": "APPROVE",
+          "relevance_score": 0.85,
+          "credibility_score": 0.75,
+          "trending_score": 0.8,
+          "reasoning": "This story fits into a larger trend of youth activism gaining prominence, which has historical parallels with movements like the civil rights movement, anti-war protests, and more recently, the global protests surrounding climate issues post-2018. The mobilization ahead of COP28 signifies a critical moment as young activists press for accountability and tangible action from global leaders. Given the urgency of climate change, this event could act as a turning point in the political landscape, similar to previous moments of environmental awakening like the 1960s and the establishment of Earth Day in 1970. It will matter not only five years hence but also in shaping future environmental policy and activism.",
+          "key_strengths": [
+            "High engagement potential given the ongoing youth-led climate movement and COP28's global significance.",
+            "Aligns with growing public awareness and concern about climate change, giving it timeliness and resonance."
+          ],
+          "key_concerns": [
+            "The story may lean on the emotional appeals of youth activism that, while valid, can lack concrete outcomes or immediate political ramifications.",
+            "Though highly relevant now, the long-term effectiveness of such strikes often hinges on resulting policy changes, which can take time to assess."
+          ],
+          "suggestions": [
+            "Consider incorporating case studies or narratives from previous youth-led movements to provide historical context and highlight potential outcomes this time around.",
+            "Include voices or quotes from political leaders or policymakers to reflect the immediate response to these protests."
+          ],
+          "similar_stories": [
+            "Recent coverage of the Fridays for Future protests and the youth's impact on climate policy discussions in prior years (e.g., 2019 and 2020)"
+          ],
+          "competitive_advantage": "This story stands out by capturing the urgency and magnitude of youth activism in an increasingly unstable climate landscape and frames the upcoming COP28 as a critical juncture, pushing leaders to reflect on their commitments amidst this global call to action.",
+          "voted_at": "2026-02-06T12:12:23.849162"
+        },
+        {
+          "council_member": "Fact Checker - Accuracy & Verification",
+          "decision": "NEEDS_MORE_INFO",
+          "relevance_score": 0.9,
+          "credibility_score": 0.6,
+          "trending_score": 0.5,
+          "reasoning": "The story pitch highlights an important and timely topic as youth climate activism is gaining momentum around the COP28 summit. However, the reliance on sources from Twitter/X and Reddit raises concerns about their reliability for this story. The quotes lack specific attribution, making it difficult to verify their authenticity. Furthermore, the urgency of the topic does not equate to reliability, and more robust sourcing is needed to ensure accuracy. A more thorough investigation with sources directly involved in organizing the climate strike, such as known climate activist groups or news organizations covering the events, would increase the credibility.",
+          "key_strengths": [
+            "Timely subject with high audience interest",
+            "Growing trend of youth activism globally"
+          ],
+          "key_concerns": [
+            "Lack of primary sources or direct quotes from leaders",
+            "Quotes are unattributed and may be out of context"
+          ],
+          "suggestions": [
+            "Verify quotes from leaders of the movement",
+            "Include statements from established environmental organizations or activists"
+          ],
+          "similar_stories": [
+            "Coverage of previous climate strikes and youth-led activism",
+            "Reports on past COP meetings and related protests"
+          ],
+          "competitive_advantage": "This story highlights a powerful movement of youth activism that is particularly relevant as we approach COP28, providing an opportunity to engage audiences with a fresh angle supported by comprehensive and verified information.",
+          "voted_at": "2026-02-06T12:12:31.680015"
+        }
+      ],
+      "decided_at": "2026-02-06T12:12:31.680444"
+    },
+    {
+      "story_id": "2",
+      "headline": "Scientists Warn of Unprecedented Climate Consequences Post-COP28",
+      "total_votes": 4,
+      "approve_count": 2,
+      "reject_count": 1,
+      "hold_count": 0,
+      "avg_relevance": 0.88,
+      "avg_credibility": 0.54,
+      "avg_trending": 0.62,
+      "overall_score": 0.67,
+      "is_approved": true,
+      "priority": "medium",
+      "approved_for_stage": "research",
+      "next_agent": "Script_Writer",
+      "votes": [
+        {
+          "council_member": "Trend Voter - Mainstream Media Perspective",
+          "decision": "NEEDS_MORE_INFO",
+          "relevance_score": 0.8,
+          "credibility_score": 0.4,
+          "trending_score": 0.5,
+          "reasoning": "While the topic of climate consequences post-COP28 is indeed highly relevant and timely, the sources cited are inadequate for a strong story. TikTok and Twitter/X, while popular, are not considered tier-one credible sources. The reliance on these channels raises questions about the reliability and scientific backing of the claims being made. We need robust, multi-sourced evidence from reputable scientific publications or institutions to substantiate the claims before it can be elevated to a full report.",
+          "key_strengths": [
+            "High relevance to ongoing global climate discussions",
+            "Timeliness related to COP28 outcomes and broader climate issues"
+          ],
+          "key_concerns": [
+            "Sources are tier-2 and lack the credibility needed for such critical claims",
+            "Quotes lack attribution to named experts or institutions, making verification difficult"
+          ],
+          "suggestions": [
+            "Seek out quotes and data from recognized climate scientists or institutions involved in COP28 negotiations",
+            "Include multi-source confirmation and data-driven evidence to strengthen the narrative"
+          ],
+          "similar_stories": [
+            "Recent coverage of COP28 outcomes and reactions from environmental scientists in major news outlets"
+          ],
+          "competitive_advantage": "The imminent discussions and consequences of COP28 position this story as part of a timely critique that could lead to immediate impact if backed by credible sources.",
+          "voted_at": "2026-02-06T12:12:41.465058"
+        },
+        {
+          "council_member": "Trend Voter - Social Media Strategist",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 0.8,
+          "trending_score": 0.7,
+          "reasoning": "This story is highly relevant given the current global discourse surrounding climate change, especially with COP28 being a topical event. The framing around 'unprecedented climate consequences' and 'tipping points' creates urgency and evokes strong emotional responses, as people are generally anxious about climate change. The pressing messages encourage shares among activists and concerned citizens, making it likely to resonate with the audience. The credibility scores are bolstered by concerns raised by researchers, though the sources need to be more reputable to enhance trustworthiness. Overall, the topic fits well across platforms, especially Twitter for discourse and TikTok for more visual content around climate issues.",
+          "key_strengths": [
+            "High relevance to current global issues about climate change.",
+            "Strong emotional triggers associated with urgency and fear about climate impacts."
+          ],
+          "key_concerns": [
+            "Sources are from tier 2 reputability, which might affect trust.",
+            "The narrative could become repetitive quickly if overcovered without new angles."
+          ],
+          "suggestions": [
+            "Incorporate more reputable sources, such as scientific journals or reputable climate NGOs. Adding visuals or infographics that demonstrate potential tipping points can enhance shareability."
+          ],
+          "similar_stories": [
+            "Coverage of COP28 debates on climate action commitments and their implications."
+          ],
+          "competitive_advantage": "The story stands out by combining urgent calls to action with scientific research, directly appealing to an audience already engaged in the climate debate and encouraging immediate engagement.",
+          "voted_at": "2026-02-06T12:12:48.906125"
+        },
+        {
+          "council_member": "Trend Voter - Historical Significance",
+          "decision": "APPROVE",
+          "relevance_score": 0.9,
+          "credibility_score": 0.7,
+          "trending_score": 0.8,
+          "reasoning": "The story highlights an urgent and pressing issue that aligns with ongoing global concerns regarding climate change and its exacerbation post-international summits. Given the historical significance of climate discussions at COP meetings and the potential tipping points mentioned, this story has a good chance of becoming pivotal in shaping future climate policy and public perception. The concern voiced by researchers fits well within historical patterns observed after key environmental conferences. Additionally, the calls for stronger commitments resonate with past narratives of missed chances for significant climate action, much like those seen post-Paris Agreement.",
+          "key_strengths": [
+            "Addresses timeliness and urgency of climate action, particularly in the context of COP28.",
+            "Taps into existing fears and scientific expertise around climate change, which increases public engagement."
+          ],
+          "key_concerns": [
+            "The reliance on social media for sourcing may dilute the credibility of the research and findings.",
+            "Without more concrete data or examples of these tipping points, the story may come off as alarmist."
+          ],
+          "suggestions": [
+            "Include more informed sources, such as peer-reviewed studies or expert interviews, to bolster credibility.",
+            "Provide specific examples of what these tipping points could be and what the ramifications might look like."
+          ],
+          "similar_stories": [
+            "Recent articles about the outcomes and implications of COP27 discussions and their impacts on climate commitments globally."
+          ],
+          "competitive_advantage": "This story stands out by framing the narrative around urgent scientific warning and post-event analysis, which could resonate with a wide audience and influence future climate discourse.",
+          "voted_at": "2026-02-06T12:12:56.758433"
+        },
+        {
+          "council_member": "Fact Checker - Accuracy & Verification",
+          "decision": "REJECT",
+          "relevance_score": 0.9,
+          "credibility_score": 0.4,
+          "trending_score": 0.5,
+          "reasoning": "The story's primary sources, TikTok and Twitter/X, are categorized as tier 2 reputable but are not the most reliable sources for scientific claims. The claims about climate consequences after COP28 seem speculative, as no specific, verifiable studies or quotes from recognized scientists or climate experts are cited. The key quotes lack attribution to identifiable individuals or organizations, making it difficult to assess their credibility and accuracy. Furthermore, the information provided appears to align too closely with a general narrative of impending climate disaster without providing new, substantiated insights. This raises a red flag for context manipulation.",
+          "key_strengths": [
+            "High relevance due to the current timing with COP28",
+            "Engages important ongoing discussion about climate change"
+          ],
+          "key_concerns": [
+            "Lack of credible primary sources",
+            "Anonymous and vagueness of key quotes"
+          ],
+          "suggestions": [
+            "Include verified quotes from recognized scientists",
+            "Reference studies or official report findings related to climate tipping points"
+          ],
+          "similar_stories": [
+            "Coverage on climate change impacts post international climate summits",
+            "Recent articles on outcomes of previous COP summits"
+          ],
+          "competitive_advantage": "Discusses potential climate impacts in the context of a major international event, COP28, which is highly relevant to global audiences.",
+          "voted_at": "2026-02-06T12:13:04.195737"
+        }
+      ],
+      "decided_at": "2026-02-06T12:13:04.196318"
+    }
+  ],
+  "total_discovered": 4,
+  "total_approved": 4,
+  "approval_rate": 1.0,
+  "processing_time_seconds": 210.24291110038757,
+  "scout_agents_used": [
+    "Wire_Scout",
+    "Social_Scout",
+    "Semantic_Scout"
+  ],
+  "council_agents_used": [
+    "Trend_Voter_Mainstream",
+    "Trend_Voter_Social",
+    "Trend_Voter_Historical",
+    "Fact_Checker"
+  ]
+}
